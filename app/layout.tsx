@@ -1,3 +1,8 @@
+import "./globals.css";
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
+
 export const metadata = {
   title: "Harsh Shrivastava | Full Stack Engineer",
   description: "Full Stack Engineer specializing in Next.js, TypeScript, and high-performance web architecture.",
@@ -8,7 +13,7 @@ export const metadata = {
     siteName: "Harsh Shrivastava Portfolio",
     images: [
       {
-        url: "/og-image.png", // You can create this image later
+        url: "/og-image.png",
         width: 1200,
         height: 630,
       },
@@ -17,3 +22,17 @@ export const metadata = {
     type: "website",
   },
 };
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.className} bg-[#030303] text-white antialiased`}>
+        {children}
+      </body>
+    </html>
+  );
+}
