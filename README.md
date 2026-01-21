@@ -1,55 +1,58 @@
-# ⚡ Harsh Shrivastava | Full Stack Portfolio
+# 👋 Hi, I'm Harsh Shrivastava 
 
-![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.dot.js)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38B2AC?style=for-the-badge&logo=tailwind-css)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-Animation-purple?style=for-the-badge&logo=framer)
+### 🚀 Full Stack Engineer | MERN Specialist | UI/UX Enthusiast
 
-A high-performance, interactive developer portfolio built to showcase my Full Stack engineering projects and technical skills.
+I am a **Full Stack Engineer** passionate about building high-performance web applications. I specialize in the **Next.js & MERN ecosystem**, focusing on scalable architecture, secure authentication, and interactive user experiences.
 
-## 🚀 Key Features
+---
 
-- **Deep Space Theme:** Custom-built "Warp Speed" particle background optimized for performance.
-- **Glassmorphism UI:** Modern, frosted-glass components using Tailwind CSS utility classes.
-- **3D Interactions:** Project cards feature a 3D Tilt effect using `framer-motion`.
-- **Spotlight Skills:** Interactive hover effects that track cursor movement over skill cards.
-- **Fully Responsive:** Optimized for all devices from mobile phones to 4K desktops.
+### 🛠️ Technical Ecosystem
 
-## 🛠️ Tech Stack
+| Category | Technologies |
+| :--- | :--- |
+| **Frontend** | Next.js 15, React 19, TypeScript, Tailwind CSS, Redux |
+| **Backend** | Node.js, Express.js, REST APIs |
+| **Database** | PostgreSQL, MongoDB, MySQL, TypeORM |
+| **Tools** | Git, GitHub, Postman, Vercel, VS Code |
 
-- **Framework:** Next.js 15 (App Router)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **Animations:** Framer Motion
-- **Icons:** React Icons (Simple Icons & FontAwesome)
-- **Deployment:** Vercel
+---
 
-## 💻 Running Locally
+### 🌟 Featured Portfolio Project
+This repository also hosts my live portfolio, featuring:
+- **Warp Speed Theme:** Custom-built 3D particle background optimized for performance.
+- **Spotlight Interactions:** Brand-colored hover effects on tech cards.
+- **3D Perspective:** Interactive project displays using Framer Motion.
+- **Live Demo:** [harsh-shrivastava.vercel.app](https://harsh-shrivastava.vercel.app)
 
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/h4rsh003/h4rsh003.git](https://github.com/h4rsh003/h4rsh003.git)
+---
 
-```
+### 📊 GitHub Statistics
 
-2. Install dependencies:
+<p align="left">
+  <img src="https://github-readme-stats.vercel.app/api?username=h4rsh003&show_icons=true&theme=tokyonight&hide_border=true&align=center" alt="Harsh's GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=h4rsh003&layout=compact&theme=tokyonight&hide_border=true&align=center" alt="Top Languages" />
+</p>
+
+---
+
+### 📬 Connect With Me
+
+- **Email:** [harshshrivastava003@gmail.com](mailto:harshshrivastava003@gmail.com)
+- **LinkedIn:** [LinkedIn/Harsh-Shrivastava](https://www.linkedin.com/in/harsh-shrivastava003)
+- **WhatsApp:** [Message Me](https://wa.me/919826808544)
+
+---
+
+### 💻 Development Setup
+
+If you'd like to run my portfolio locally:
+
 ```bash
+# Clone the repo
+git clone [https://github.com/h4rsh003/h4rsh003.git](https://github.com/h4rsh003/h4rsh003.git)
+
+# Install dependencies
 npm install
 
-```
-
-
-3. Run the development server:
-```bash
+# Run in development mode
 npm run dev
-
-```
-
-
-4. Open [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000) with your browser to see the result.
-
-## 📬 Contact
-
-* **Email:** harshshrivastava003@gmail.com
-* **LinkedIn:** [Harsh Shrivastava](https://www.linkedin.com/in/harsh-shrivastava003)
-<!-- * **Live Demo:** [View Portfolio](https://www.google.com/search?q=https://harsh-shrivastava.vercel.app) -->
