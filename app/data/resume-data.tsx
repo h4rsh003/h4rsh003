@@ -91,11 +91,11 @@ export const RESUME_DATA = {
             color: "from-emerald-500 to-teal-400"
         },
         {
-            title: "Shopping Cart",
+            title: "SuperMarket Shopping Cart",
             category: "E-Commerce Interface",
-            tech: "React.js • Redux • Tailwind",
-            desc: "Designed a highly interactive shopping cart allowing easy product selection and purchase. Used Redux Toolkit for dynamic state management.",
-            link: "https://shopping-cart-six-silk.vercel.app",
+            tech: "React.js • Redux Toolkit • Tailwind",
+            desc: "Built a persistent E-commerce cart with Redux Toolkit and LocalStorage. Features real-time price calculation, responsive grid layouts, and interactive toast notifications.",
+            link: "https://super-market-shopping-cart.vercel.app/",
             color: "from-orange-500 to-amber-500"
         }
     ] as ProjectItem[],
