@@ -5,8 +5,6 @@ import { FiArrowRight, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 import { RESUME_DATA } from '@/app/data/resume-data';
 import React from 'react';
 
-// --- MAIN COMPONENT ---
-
 export const Hero = () => {
 
     const mouseX = useMotionValue(0);
@@ -24,12 +22,10 @@ export const Hero = () => {
     return (
         <section
             id="hero"
-            // Ensure background is transparent so the FixedBackground shows through
             className="relative flex min-h-screen flex-col justify-center px-6 overflow-hidden group bg-transparent"
             onMouseMove={handleMouseMove}
         >
-            
-            {/* Spotlight Effect - Keep this, it interacts with mouse */}
+
             <motion.div
                 className="pointer-events-none absolute inset-0 z-0 bg-[linear-gradient(to_right,#3b82f61a_1px,transparent_1px),linear-gradient(to_bottom,#3b82f61a_1px,transparent_1px)] bg-size-[4rem_4rem]"
                 style={{
@@ -38,15 +34,14 @@ export const Hero = () => {
                 }}
             />
 
-            {/* REMOVED: ParticleBackground component */}
 
-            <div className="container mx-auto max-w-6xl z-10 pb-20 relative">
+            <div className="container mx-auto max-w-6xl z-10 pb-10 relative">
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="mb-8 flex items-center gap-3 w-fit mt-20 md:mt-0"
+                    className="mb-8 flex items-center gap-3 w-fit mt-5 md:mt-0"
                 >
                     <div className="relative flex h-3 w-3">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -122,16 +117,6 @@ export const Hero = () => {
                     </div>
                 </motion.div>
             </div>
-
-            {/* <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1, y: [0, 10, 0] }}
-                transition={{ delay: 1, duration: 2, repeat: Infinity }}
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 text-gray-500 flex flex-col items-center gap-2"
-            >
-                <span className="uppercase tracking-[0.2em] text-[10px] font-bold">Scroll</span>
-                <div className="w-px h-12 bg-linear-to-b from-gray-500 to-transparent" />
-            </motion.div> */}
         </section>
     );
 };
