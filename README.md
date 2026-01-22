@@ -7,18 +7,17 @@
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://harsh-shrivastava.vercel.app)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/919826808544)
 
-<div>
-  <img src="https://img.shields.io/badge/Next.js_15-Expert-blue?style=flat-square&logo=nextdotjs" />
-  <img src="https://img.shields.io/badge/TypeScript-Advanced-blue?style=flat-square&logo=typescript" />
-  <img src="https://img.shields.io/badge/MERN_Stack-Specialist-indigo?style=flat-square&logo=mongodb" />
-</div>
+<br />
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=h4rsh003&layout=compact&theme=tokyonight&hide_border=true&align=center" />
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=h4rsh003&theme=tokyonight&hide_border=true" />
 
 ---
 
-### 💫 About Me
-[cite_start]I am a **Full Stack Engineer** specializing in the **Next.js & MERN ecosystem**[cite: 5, 10]. [cite_start]I focus on building high-performance web applications with scalable architecture, secure authentication, and interactive user experiences[cite: 13, 19].
+### 💫 Digital Identity
+I am a **Full Stack Engineer** specializing in the **Next.js & MERN ecosystem**. I focus on building high-performance web applications with scalable architecture, secure authentication, and interactive user experiences.
 
-[cite_start]**Core Specializations:** `Zustand` • `TypeORM` • `NextAuth.js` • `RESTful APIs` [cite: 17, 19, 20, 26]
+**Specialized in:** `Zustand` • `TypeORM` • `PostgreSQL` • `NextAuth.js`
 
 ---
 
@@ -36,12 +35,6 @@
 - **Interactive Spotlight:** Dynamic hover effects that track cursor movement over technical cards.
 - **3D Perspective:** Project showcase utilizing interactive 3D perspective transforms via Framer Motion.
 - **Optimized Core Web Vitals:** Built with Next.js 15 for maximum speed and SEO efficiency.
-
----
-
-### 🎓 Education
-[cite_start]**Bachelor of Technology in Computer Science & Engineering** [cite: 35]  
-*ShriRam College of Engineering & Management* | [cite_start]*2021 — 2025* [cite: 34, 36]
 
 ---
 
