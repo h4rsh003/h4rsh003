@@ -9,8 +9,7 @@
 
 <br />
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=h4rsh003&layout=compact&theme=tokyonight&hide_border=true&align=center" />
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=h4rsh003&theme=tokyonight&hide_border=true" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=h4rsh003&layout=compact&theme=tokyonight&hide_border=true&align=center" alt="Most Used Languages" />
 
 ---
 
