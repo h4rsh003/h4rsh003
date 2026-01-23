@@ -97,6 +97,14 @@ export const RESUME_DATA = {
             desc: "Built a persistent E-commerce cart with Redux Toolkit and LocalStorage. Features real-time price calculation, responsive grid layouts, and interactive toast notifications.",
             link: "https://super-market-shopping-cart.vercel.app/",
             color: "from-orange-500 to-amber-500"
+        },
+        {
+            title: "Weather.io Dashboard",
+            category: "Real-Time Weather App",
+            tech: "JavaScript • OpenWeatherMap • CSS3",
+            desc: "Engineered a dynamic weather dashboard with glassmorphism UI. Features real-time geolocation data, 5-day forecasting, and adaptive background themes based on live weather conditions.",
+            link: "https://weather-app-pi-lemon-83.vercel.app/",
+            color: "from-blue-500 to-cyan-500"
         }
     ] as ProjectItem[],
 
