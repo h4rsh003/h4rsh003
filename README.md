@@ -9,7 +9,7 @@
 
 <br />
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=h4rsh003&layout=compact&theme=tokyonight&hide_border=true&align=center" alt="Most Used Languages" />
+<!-- <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=h4rsh003&layout=compact&theme=tokyonight&hide_border=true&align=center" alt="Most Used Languages" /> -->
 
 ---
 
