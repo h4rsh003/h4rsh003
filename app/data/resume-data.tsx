@@ -74,11 +74,12 @@ export const RESUME_DATA = {
     ] as ExperienceItem[],
 
     projects: [
+
         {
             title: "Travel Buddy",
-            category: "Full Stack Social Platform",
-            tech: "Next.js • PostgreSQL • TypeORM • Zustand",
-            desc: "Architected a decoupled full-stack platform. Modeled complex relational data (One-to-Many). Engineered advanced auth with email OTPs.",
+            category: "Full Stack Social Travel Platform",
+            tech: "Next.js • PostgreSQL • TypeORM • Zustand • Socket.io",
+            desc: "Built a scalable full-stack travel platform with secure OTP authentication, real-time chat, relational database modeling, and dynamic trip management using Next.js and PostgreSQL.",
             link: "https://travel-buddy-dusky-mu.vercel.app",
             color: "from-blue-600 to-cyan-400"
         },
