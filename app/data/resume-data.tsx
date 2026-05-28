@@ -79,7 +79,7 @@ export const RESUME_DATA = {
             title: "Travel Buddy",
             category: "Full Stack Social Travel Platform",
             tech: "Next.js • PostgreSQL • TypeORM • Zustand • Socket.io",
-            desc: "Built a scalable full-stack travel platform with secure OTP authentication, real-time chat, relational database modeling, and dynamic trip management using Next.js and PostgreSQL.",
+            desc: "Developed a complete social network for travelers to discover group trips, manage their itineraries, chat in real-time, and get smart updates—all in one secure platform.",
             link: "https://travel-buddy-dusky-mu.vercel.app",
             color: "from-blue-600 to-cyan-400"
         },
