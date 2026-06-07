@@ -48,21 +48,21 @@ export const Hero = () => {
                         <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                     </div>
                     <span className="text-xs md:text-sm font-bold tracking-[0.2em] text-green-400 uppercase border border-green-500/20 bg-green-500/5 px-3 py-1 mt-2 rounded-full">
-                       Open to work
+                        Open to work
                     </span>
                 </motion.div>
 
                 <h1 className="font-black leading-[0.9] tracking-tighter text-white mb-8">
-                    <motion.div
+                    <motion.span
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
+                        className="block text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
                     >
                         <span>HARSH</span>
-                    </motion.div>
+                    </motion.span>
 
-                    <motion.div
+                    <motion.span
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
@@ -74,7 +74,7 @@ export const Hero = () => {
                         <span className="absolute top-0 left-0 -z-10 text-blue-500/20 blur-xl transform translate-y-4">
                             SHRIVASTAVA
                         </span>
-                    </motion.div>
+                    </motion.span>
                 </h1>
 
                 <motion.p
@@ -111,8 +111,8 @@ export const Hero = () => {
                     </a>
 
                     <div className="flex items-center gap-6 sm:border-l sm:border-white/10 sm:pl-6 sm:ml-2">
-                        <a href={RESUME_DATA.contact.github} target="_blank" aria-label="GitHub" className="text-gray-400 hover:text-white transition-colors text-2xl hover:scale-110 transform"><FiGithub /></a>
-                        <a href={RESUME_DATA.contact.linkedin} target="_blank" aria-label="LinkedIn" className="text-gray-400 hover:text-white transition-colors text-2xl hover:scale-110 transform"><FiLinkedin /></a>
+                        <a href={RESUME_DATA.contact.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-gray-400 hover:text-white transition-colors text-2xl hover:scale-110 transform"><FiGithub /></a>
+                        <a href={RESUME_DATA.contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-400 hover:text-white transition-colors text-2xl hover:scale-110 transform"><FiLinkedin /></a>
                         <a href={`mailto:${RESUME_DATA.contact.email}`} aria-label="Email" className="text-gray-400 hover:text-white transition-colors text-2xl hover:scale-110 transform"><FiMail /></a>
                     </div>
                 </motion.div>

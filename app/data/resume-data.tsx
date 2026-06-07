@@ -7,7 +7,7 @@ import {
     SiVercel, SiPostman, SiShadcnui, SiJavascript, SiMysql,
     SiHtml5, SiCss3
 } from 'react-icons/si';
-import { VscVscode } from "react-icons/vsc"; // FIX: Import from VSC set
+import { VscVscode } from "react-icons/vsc";
 
 // --- Interfaces ---
 
@@ -25,6 +25,7 @@ export interface ProjectItem {
     tech: string;
     desc: string;
     link: string;
+    github?: string; // ADDED: For future "View Source" buttons
     color: string;
 }
 
@@ -49,7 +50,9 @@ export const RESUME_DATA = {
     initials: "HS",
     tagline: "Building Scalable Web Experiences",
     role: "Full Stack Engineer",
-    intro: "Full Stack Engineer focused on building scalable, secure web applications. Specialized in Next.js, TypeScript, and high-performance database architecture.",
+
+    // UPDATED: More confident, action-oriented intro
+    intro: "Full Stack Engineer specializing in the MERN stack and Next.js. I transform complex requirements into elegant, production-ready web applications with seamless frontends and robust, scalable backends.",
 
     contact: {
         email: "harshshrivastava003@gmail.com",
@@ -65,46 +68,52 @@ export const RESUME_DATA = {
             role: "MERN Stack Developer Intern",
             period: "Sep 2025 - Nov 2025",
             desc: [
-                "Contributed as a Frontend Developer to the VUT (Video Uploading Tool), a secure, high-quality video recording platform.",
-                "Developed the scalable, responsive frontend using Next.js and Tailwind CSS.",
-                "Integrated critical REST APIs with the backend team, streamlining data flow and enhancing upload reliability."
+                "Contributed to VUT (Video Uploading Tool), engineering a secure, high-quality video recording platform.",
+                "Developed a scalable frontend architecture using Next.js and Tailwind CSS, optimizing component rendering for seamless cross-device performance.",
+                "Integrated critical REST APIs to streamline data flow, significantly enhancing upload reliability and overall system performance."
             ],
             active: true
         }
     ] as ExperienceItem[],
 
     projects: [
-
         {
             title: "Travel Buddy",
             category: "Full Stack Social Travel Platform",
-            tech: "Next.js • PostgreSQL • TypeORM • Zustand • Socket.io",
-            desc: "Developed a complete social network for travelers to discover group trips, manage their itineraries, chat in real-time, and get smart updates—all in one secure platform.",
+            tech: "Next.js • PostgreSQL • TypeORM • Socket.io",
+            // UPDATED: Brought in TypeORM, JWTs, and Socket.io impact from resume
+            desc: "Architected a decoupled full-stack platform handling complex relational data with TypeORM. Engineered JWT-secured Socket.io real-time chat, email-based OTP auth via NextAuth, and dynamic UI state with Zustand.",
             link: "https://travel-buddy-dusky-mu.vercel.app",
+            github: "https://github.com/h4rsh003", // Update with actual specific repo link
             color: "from-blue-600 to-cyan-400"
         },
         {
             title: "Codial",
             category: "Developer Portfolio Platform",
             tech: "MERN Stack • JWT • Tailwind",
-            desc: "Engineered a platform for developers to showcase portfolios with real-time search. Architected a modular frontend with reusable compound components.",
+            // UPDATED: Brought in MongoDB aggregations and modular architecture
+            desc: "Engineered a scalable platform featuring real-time search. Developed secure REST APIs with Node/Express, integrated JWT auth, and optimized MongoDB aggregation pipelines for rapid data retrieval.",
             link: "https://codial-woad.vercel.app",
+            github: "https://github.com/h4rsh003", // Update with actual specific repo link
             color: "from-emerald-500 to-teal-400"
         },
         {
-            title: "SuperMarket Shopping Cart",
+            title: "SuperMarket Cart",
             category: "E-Commerce Interface",
             tech: "React.js • Redux Toolkit • Tailwind",
-            desc: "Built a persistent E-commerce cart with Redux Toolkit and LocalStorage. Features real-time price calculation, responsive grid layouts, and interactive toast notifications.",
+            // UPDATED: Added business context (reducing abandonment rates)
+            desc: "Designed a highly interactive e-commerce interface utilizing Redux Toolkit. Implemented persistent local storage state to synchronize cart data across sessions and reduce cart abandonment rates.",
             link: "https://super-market-shopping-cart.vercel.app/",
+            github: "https://github.com/h4rsh003", // Update with actual specific repo link
             color: "from-orange-500 to-amber-500"
         },
         {
-            title: "Weather.io Dashboard",
+            title: "Weather Dashboard",
             category: "Real-Time Weather App",
             tech: "JavaScript • OpenWeatherMap • CSS3",
-            desc: "Engineered a dynamic weather dashboard with glassmorphism UI. Features real-time geolocation data, 5-day forecasting, and adaptive background themes based on live weather conditions.",
+            desc: "Built a dynamic, glassmorphism-styled dashboard. Integrated OpenWeather API for real-time geolocation data, 5-day forecasting, and adaptive conditional UI theming based on live weather.",
             link: "https://weather-app-pi-lemon-83.vercel.app/",
+            github: "https://github.com/h4rsh003", // Update with actual specific repo link
             color: "from-blue-500 to-cyan-500"
         }
     ] as ProjectItem[],
@@ -136,6 +145,6 @@ export const RESUME_DATA = {
         { name: "GitHub", icon: <FaGithub />, color: "#FFFFFF" },
         { name: "Postman", icon: <SiPostman />, color: "#FF6C37" },
         { name: "Vercel", icon: <SiVercel />, color: "#FFFFFF" },
-        { name: "VS Code", icon: <VscVscode />, color: "#007ACC" }, // FIX: Used VscVscode
+        { name: "VS Code", icon: <VscVscode />, color: "#007ACC" },
     ] as StackItem[]
 };

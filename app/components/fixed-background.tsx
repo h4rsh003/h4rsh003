@@ -1,5 +1,5 @@
 'use client';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 
 // --- Types ---
@@ -45,32 +45,33 @@ const generateComets = (count: number): CometData[] => {
 export const FixedBackground = () => {
   const [data, setData] = useState<BackgroundData | null>(null);
 
+  const shouldReduceMotion = useReducedMotion();
+
   useEffect(() => {
-    // FIX: Wrap in setTimeout to avoid "synchronous setState" linter error
     const timer = setTimeout(() => {
       setData({
-        stars: generateStars(40),
-        comets: generateComets(3),
+        stars: generateStars(shouldReduceMotion ? 15 : 40),
+        comets: shouldReduceMotion ? [] : generateComets(3),
       });
     }, 0);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [shouldReduceMotion]);
 
   // Hydration guard
   if (!data) return <div className="fixed inset-0 bg-[#030303]" />;
 
   return (
     <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none bg-[#030303]">
-      
+
       {/* 1. Deep Space Gradient */}
-      <div 
-        className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] opacity-30 animate-spin-slow bg-[radial-gradient(circle_at_50%_50%,#1e1b4b_0%,#000000_50%)] blur-[80px]"
+      <div
+        className={`absolute top-[-50%] left-[-50%] w-[200%] h-[200%] opacity-30 bg-[radial-gradient(circle_at_50%_50%,#1e1b4b_0%,#000000_50%)] blur-[80px] ${shouldReduceMotion ? '' : 'animate-spin-slow'}`}
       />
-      
+
       {/* 2. Warp Speed Stars */}
       {data.stars.map((star) => (
-        <WarpStar key={star.id} data={star} />
+        <WarpStar key={star.id} data={star} shouldReduceMotion={shouldReduceMotion} />
       ))}
 
       {/* 3. Shooting Comets */}
@@ -96,7 +97,7 @@ export const FixedBackground = () => {
       ))}
 
       {/* 4. Noise Overlay */}
-      <div 
+      <div
         className="absolute inset-0 opacity-[0.05] mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"
       />
     </div>
@@ -104,19 +105,19 @@ export const FixedBackground = () => {
 };
 
 // --- Sub-component ---
-const WarpStar = ({ data }: { data: StarData }) => {
+const WarpStar = ({ data, shouldReduceMotion }: { data: StarData, shouldReduceMotion: boolean | null }) => {
   return (
     <motion.div
       className="absolute top-1/2 left-1/2 w-1 h-1 bg-white rounded-full shadow-[0_0_4px_white]"
       initial={{ x: 0, y: 0, scale: 0, opacity: 0 }}
       animate={{
-        x: Math.cos(data.angle * (Math.PI / 180)) * 1000, 
+        x: Math.cos(data.angle * (Math.PI / 180)) * 1000,
         y: Math.sin(data.angle * (Math.PI / 180)) * 1000,
         scale: [0, 1.5],
-        opacity: [0, 1, 0],
+        opacity: shouldReduceMotion ? 0.5 : [0, 1, 0],
       }}
       transition={{
-        duration: data.duration,
+        duration: shouldReduceMotion ? 10 : data.duration,
         repeat: Infinity,
         delay: data.delay,
         ease: "easeIn",

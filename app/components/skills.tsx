@@ -1,5 +1,5 @@
 'use client';
-import { motion, useMotionTemplate, useMotionValue, Variants } from 'framer-motion';
+import { motion, useMotionTemplate, useMotionValue, Variants, useReducedMotion } from 'framer-motion';
 import { RESUME_DATA } from '@/app/data/resume-data';
 import React, { MouseEvent } from 'react';
 
@@ -45,7 +45,8 @@ export const Skills = () => (
                 </p>
             </motion.div>
 
-            <motion.div
+            {/* FIX: Changed motion.div to motion.ul for better semantics */}
+            <motion.ul
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -53,9 +54,10 @@ export const Skills = () => (
                 className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6"
             >
                 {RESUME_DATA.stack.map((s, i) => (
-                    <SpotlightCard key={i} s={s} index={i} />
+                    // FIX: Replaced array index 'i' with s.name for the key
+                    <SpotlightCard key={s.name} s={s} index={i} />
                 ))}
-            </motion.div>
+            </motion.ul>
         </div>
     </section>
 );
@@ -65,6 +67,9 @@ function SpotlightCard({ s, index }: { s: typeof RESUME_DATA.stack[0], index: nu
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
 
+    // FIX: Add reduced motion hook
+    const shouldReduceMotion = useReducedMotion();
+
     function handleMouseMove({ currentTarget, clientX, clientY }: MouseEvent) {
         const { left, top } = currentTarget.getBoundingClientRect();
         mouseX.set(clientX - left);
@@ -72,9 +77,10 @@ function SpotlightCard({ s, index }: { s: typeof RESUME_DATA.stack[0], index: nu
     }
 
     return (
-        <motion.div
+        // FIX: Changed motion.div to motion.li
+        <motion.li
             variants={itemVariants}
-            className="group relative h-32 md:h-36 rounded-2xl md:rounded-3xl bg-[#0A0A0A] border border-white/10 overflow-hidden"
+            className="group relative h-32 md:h-36 rounded-2xl md:rounded-3xl bg-[#0A0A0A] border border-white/10 overflow-hidden list-none"
             onMouseMove={handleMouseMove}
         >
             {/* 1. Spotlight Gradient Overlay (Follows Mouse) */}
@@ -90,7 +96,7 @@ function SpotlightCard({ s, index }: { s: typeof RESUME_DATA.stack[0], index: nu
                     `
                 }}
             />
-            
+
             {/* 2. Content Container */}
             <div className="relative h-full flex flex-col items-center justify-center p-4 md:p-6 z-10">
                 {/* Icon with Floating Animation */}
@@ -98,11 +104,11 @@ function SpotlightCard({ s, index }: { s: typeof RESUME_DATA.stack[0], index: nu
                     className="mb-3 md:mb-4 text-4xl md:text-5xl filter drop-shadow-lg transition-transform duration-300 group-hover:scale-110"
                     style={{ color: s.color }}
                     animate={{
-                        y: [0, -5, 0], // Subtle float
+                        y: shouldReduceMotion ? 0 : [0, -5, 0], // FIX: Disable float if reduced motion is on
                     }}
                     transition={{
                         duration: 3,
-                        repeat: Infinity,
+                        repeat: shouldReduceMotion ? 0 : Infinity,
                         ease: "easeInOut",
                         delay: index * 0.2,
                     }}
@@ -116,9 +122,9 @@ function SpotlightCard({ s, index }: { s: typeof RESUME_DATA.stack[0], index: nu
             </div>
 
             {/* 3. Border Glow on Hover */}
-            <div 
-                className="absolute inset-0 rounded-2xl md:rounded-3xl border border-transparent group-hover:border-white/20 transition-colors duration-300 pointer-events-none" 
+            <div
+                className="absolute inset-0 rounded-2xl md:rounded-3xl border border-transparent group-hover:border-white/20 transition-colors duration-300 pointer-events-none"
             />
-        </motion.div>
+        </motion.li>
     );
 }

@@ -3,18 +3,34 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #262626 #030303;
   }
-  
+
   body {
     background-color: #030303;
     color: white;
-    /* Hide default cursor only on non-touch devices if using CustomCursor */
+
+    & ::selection {
+      background-color: rgba(59, 130, 246, 0.3);
+      color: #bfdbfe;
+    }
+
     @media (pointer: fine) {
-      cursor: none; 
+      cursor: none;
+
+      a,
+      button,
+      [role="button"],
+      input,
+      textarea,
+      select {
+        cursor: none;
+      }
     }
   }
 
-  /* Custom Scrollbar */
+  /* WebKit Custom Scrollbar (Chrome, Safari, Edge) */
   ::-webkit-scrollbar {
     width: 8px;
   }
@@ -31,13 +47,20 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #404040;
   }
+
+  :focus-visible {
+    outline: 2px solid #3b82f6;
+    /* blue-500 */
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
 }
 
-/* Hide scrollbar for the Navbar on mobile */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .no-scrollbar {
-  -ms-overflow-style: none; 
-  scrollbar-width: none; 
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
