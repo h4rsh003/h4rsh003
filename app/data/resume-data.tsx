@@ -9,8 +9,6 @@ import {
 } from 'react-icons/si';
 import { VscVscode } from "react-icons/vsc";
 
-// --- Interfaces ---
-
 export interface ExperienceItem {
     company: string;
     role: string;
@@ -25,7 +23,7 @@ export interface ProjectItem {
     tech: string;
     desc: string;
     link: string;
-    github?: string; // ADDED: For future "View Source" buttons
+    github?: string;
     color: string;
 }
 
@@ -43,15 +41,12 @@ export interface ContactInfo {
     phone: string;
 }
 
-// --- Data ---
-
 export const RESUME_DATA = {
     name: "Harsh Shrivastava",
     initials: "HS",
     tagline: "Building Scalable Web Experiences",
     role: "Full Stack Engineer",
 
-    // UPDATED: More confident, action-oriented intro
     intro: "Full Stack Engineer specializing in the MERN stack and Next.js. I transform complex requirements into elegant, production-ready web applications with seamless frontends and robust, scalable backends.",
 
     contact: {
@@ -78,33 +73,39 @@ export const RESUME_DATA = {
 
     projects: [
         {
+            title: "SkillScan AI",
+            category: "Intelligent Mock Interview Platform",
+            tech: "Next.js • TypeScript • Gemini API • Web Speech API",
+            desc: "Architected a full-stack AI platform that parses resumes to generate context-aware technical interviews using the Google Gemini API. Integrated Web Speech API for real-time voice input and enforced strict JSON schemas.",
+            link: "https://skill-scan-ai-gamma.vercel.app/",
+            github: "https://github.com/h4rsh003/SkillScan-ai",
+            color: "from-purple-600 to-indigo-400"
+        },
+        {
             title: "Travel Buddy",
             category: "Full Stack Social Travel Platform",
             tech: "Next.js • PostgreSQL • TypeORM • Socket.io",
-            // UPDATED: Brought in TypeORM, JWTs, and Socket.io impact from resume
             desc: "Architected a decoupled full-stack platform handling complex relational data with TypeORM. Engineered JWT-secured Socket.io real-time chat, email-based OTP auth via NextAuth, and dynamic UI state with Zustand.",
             link: "https://travel-buddy-dusky-mu.vercel.app",
-            github: "https://github.com/h4rsh003", // Update with actual specific repo link
+            github: "https://github.com/h4rsh003/Travel-buddy",
             color: "from-blue-600 to-cyan-400"
         },
         {
             title: "Codial",
             category: "Developer Portfolio Platform",
             tech: "MERN Stack • JWT • Tailwind",
-            // UPDATED: Brought in MongoDB aggregations and modular architecture
             desc: "Engineered a scalable platform featuring real-time search. Developed secure REST APIs with Node/Express, integrated JWT auth, and optimized MongoDB aggregation pipelines for rapid data retrieval.",
             link: "https://codial-woad.vercel.app",
-            github: "https://github.com/h4rsh003", // Update with actual specific repo link
+            github: "https://github.com/h4rsh003",
             color: "from-emerald-500 to-teal-400"
         },
         {
             title: "SuperMarket Cart",
             category: "E-Commerce Interface",
             tech: "React.js • Redux Toolkit • Tailwind",
-            // UPDATED: Added business context (reducing abandonment rates)
             desc: "Designed a highly interactive e-commerce interface utilizing Redux Toolkit. Implemented persistent local storage state to synchronize cart data across sessions and reduce cart abandonment rates.",
             link: "https://super-market-shopping-cart.vercel.app/",
-            github: "https://github.com/h4rsh003", // Update with actual specific repo link
+            github: "https://github.com/h4rsh003",
             color: "from-orange-500 to-amber-500"
         },
         {
@@ -113,7 +114,7 @@ export const RESUME_DATA = {
             tech: "JavaScript • OpenWeatherMap • CSS3",
             desc: "Built a dynamic, glassmorphism-styled dashboard. Integrated OpenWeather API for real-time geolocation data, 5-day forecasting, and adaptive conditional UI theming based on live weather.",
             link: "https://weather-app-pi-lemon-83.vercel.app/",
-            github: "https://github.com/h4rsh003", // Update with actual specific repo link
+            github: "https://github.com/h4rsh003",
             color: "from-blue-500 to-cyan-500"
         }
     ] as ProjectItem[],
